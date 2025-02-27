@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أوروبا: من نهاية الحرب العالمية الأولى إلى أزمة 1929</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cinzel:wght@400;700&family=IM+Fell+English&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="parallax-bg"></div>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#intro">المقدمة</a></li>
+                <li class="dropdown">
+                    <a href="#russia" class="dropbtn">روسيا</a>
+                    <div class="dropdown-content">
+                        <a href="#russia">الحرب الأهلية</a>
+                        <a href="#russia">الاتحاد السوفيتي</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#germany" class="dropbtn">ألمانيا</a>
+                    <div class="dropdown-content">
+                        <a href="#germany">التضخم الكبير</a>
+                        <a href="#germany">خطة داوس</a>
+                    </div>
+                </li>
+                <li><a href="#france">فرنسا</a></li>
+                <li><a href="#england">إنجلترا</a></li>
+                <li><a href="#map-section">الخريطة</a></li>
+                <li><a href="#timeline">الخط الزمني</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="header-content">
+            <h1>أوروبا: من نهاية الحرب العالمية الأولى إلى أزمة 1929</h1>
+            <div class="typewriter"></div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="section scroll-section" id="intro">
+            <h2><i class="fas fa-book-open"></i> مقدمة تاريخية</h2>
+            <p>انتهت الحرب العالمية الأولى في 11 نوفمبر 1918 بتوقيع هدنة كومبيين، تاركة أوروبا في حالة من الدمار والتحولات العميقة. انهارت إمبراطوريات كبرى مثل النمساوية-المجرية (التي تفككت إلى النمسا والمجر وتشيكوسلوفاكيا) والعثمانية (التي أصبحت تركيا الحديثة)، بينما ظهرت دول جديدة مثل يوغوسلافيا وبولندا. بدأت الأزمات الاقتصادية والسياسية تتراكم، ممهدة الطريق للكساد الكبير في 1929 الذي هز العالم.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WW1_end.jpg/320px-WW1_end.jpg" alt="نهاية الحرب" class="historical-img">
+        </div>
+        <div class="section scroll-section" id="russia">
+            <h2><i class="fas fa-hammer"></i> روسيا: الثورة والفوضى</h2>
+            <p>انسحبت روسيا من الحرب في مارس 1918 عبر معاهدة بريست-ليتوفسك، خاسرةً أكثر من 300 ألف كيلومتر مربع من أراضيها. الحرب الأهلية (1918-1921) بين البلاشفة والجيوش البيضاء أودت بحياة 9 ملايين شخص، تلتها مجاعة 1921 التي قتلت 5 ملايين بسبب سوء إدارة المحاصيل. في 1922، أسس لينين الاتحاد السوفيتي، وأدخل سياسة الاقتصاد الجديد (NEP) لإنعاش الاقتصاد المنهار، وسط مقاومة داخلية وخارجية.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Bolshevik_Revolution.jpg/320px-Bolshevik_Revolution.jpg" alt="الثورة في روسيا" class="historical-img">
+        </div>
+        <div class="section scroll-section" id="germany">
+            <h2><i class="fas fa-coins"></i> ألمانيا: الانهيار والتعافي المؤقت</h2>
+            <p>بعد الهزيمة، وقّعت ألمانيا معاهدة فرساي في 1919، التي ألزمتها بدفع 132 مليار مارك ذهبي كتعويضات، وقلصت جيشها إلى 100 ألف جندي، وسلبتها أراضٍ مثل الألزاس-لورين. في 1923، بلغ التضخم ذروته عندما أصبح الدولار يساوي 4.2 تريليون مارك، مما دفع العائلات لحرق النقود للتدفئة. خطة داوس (1924) قدمت قروضًا أمريكية، وخطة يونغ (1929) خففت العبء، لكن الكساد الكبير أعاد البلاد إلى الهاوية.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyperinflation_in_Germany_1923.jpg/320px-Hyperinflation_in_Germany_1923.jpg" alt="التضخم في ألمانيا" class="historical-img">
+        </div>
+        <div class="section scroll-section" id="france">
+            <h2><i class="fas fa-shield-alt"></i> فرنسا: الدمار والانتقام</h2>
+            <p>خسرت فرنسا 1.4 مليون جندي و60% من شبابها، وتحولت أراضيها الشمالية إلى أنقاض بمساحة 34 ألف كيلومتر مربع. احتلت منطقة الرور في 1923 لإجبار ألمانيا على دفع التعويضات، وحققت ازدهارًا ثقافيًا في "السنوات المجنونة" مع فن الآرت ديكو والجاز. لكن الكساد الكبير أثر على صادراتها وأضعف اقتصادها المتعافي بحلول 1929.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ruhr_occupation.jpg/320px-Ruhr_occupation.jpg" alt="احتلال الرور" class="historical-img">
+        </div>
+        <div class="section scroll-section" id="england">
+            <h2><i class="fas fa-industry"></i> إنجلترا: التحديات الاقتصادية</h2>
+            <p>بعد الحرب، ارتفعت البطالة في بريطانيا إلى 11%، وتراجعت الصناعة بسبب منافسة أمريكا واليابان. الإضراب العام في مايو 1926 استمر 9 أيام بمشاركة 1.7 مليون عامل، مطالبين بأجور أفضل. حافظت على نفوذها عبر الإمبراطورية البريطانية، لكن الكساد الكبير أدى إلى انهيار صادرات الفحم والصلب بحلول 1929.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/General_Strike_1926.jpg/320px-General_Strike_1926.jpg" alt="الإضراب العام" class="historical-img">
+        </div>
+        <div class="section scroll-section" id="map-section">
+            <h2><i class="fas fa-map-marked-alt"></i> الخريطة التفاعلية</h2>
+            <p>استكشف التغيرات الحدودية في أوروبا: تفكك الإمبراطورية النمساوية-المجرية، ظهور بولندا وتشيكوسلوفاكيا، وتقلص ألمانيا والإمبراطورية الروسية.</p>
+            <div class="map-controls">
+                <button onclick="show1918()">خريطة 1918</button>
+                <button onclick="show1929()">خريطة 1929</button>
+                <button onclick="playSound()">صوت الخلفية</button>
+            </div>
+            <div id="map"></div>
+        </div>
+        <div class="section scroll-section" id="timeline">
+            <h2><i class="fas fa-clock"></i> الخط الزمني</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">11 نوفمبر 1918</span>
+                    <p>نهاية الحرب العالمية الأولى بهدنة كومبيين.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">28 يونيو 1919</span>
+                    <p>توقيع معاهدة فرساي مع ألمانيا.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">1921</span>
+                    <p>مجاعة روسيا الكبرى تقتل 5 ملايين.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">1923</span>
+                    <p>احتلال فرنسا للرور وتضخم ألمانيا الفائق.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">1926</span>
+                    <p>الإضراب العام في بريطانيا.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">29 أكتوبر 1929</span>
+                    <p>بداية الكساد الكبير بعد انهيار بورصة وول ستريت.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>وثيقة تاريخية فاخرة - أعدها عشاق التاريخ 2025</p>
+    </footer>
+    <audio id="background-sound" src="https://www.soundjay.com/buttons/beep-01a.mp3"></audio>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.12/dist/typed.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

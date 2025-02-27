@@ -80,13 +80,13 @@ function playSound() {
 
 var typed = new Typed('.typewriter', {
     strings: [
-        "وثيقة تاريخية فاخرة...",
+        "وثيقة تاريخية ملحمية...",
         "من 1918 إلى 1929...",
-        "أحداث هزت القارة العجوز...",
-        "استعد لرحلة عبر الزمن..."
+        "أحداث غيرت وجه أوروبا...",
+        "انطلق في رحلة عبر العصور..."
     ],
-    typeSpeed: 60,
-    backSpeed: 40,
+    typeSpeed: 70,
+    backSpeed: 50,
     loop: true,
     cursorChar: '✒'
 });
@@ -111,9 +111,9 @@ window.addEventListener('scroll', () => {
 window.onload = function() {
     document.body.style.opacity = 0;
     setTimeout(() => {
-        document.body.style.transition = 'opacity 2s ease';
+        document.body.style.transition = 'opacity 2.5s ease';
         document.body.style.opacity = 1;
-    }, 200);
+    }, 300);
 };
 
 window.addEventListener('resize', () => {
@@ -128,9 +128,23 @@ L.Map.mergeOptions({
 
 document.querySelectorAll('.section').forEach(section => {
     section.addEventListener('click', () => {
-        section.style.transform = 'scale(1.02)';
+        section.style.transform = 'scale(1.03)';
         setTimeout(() => {
             section.style.transform = 'scale(1)';
-        }, 200);
+        }, 250);
+    });
+});
+
+document.querySelectorAll('.nav-menu a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
     });
 });

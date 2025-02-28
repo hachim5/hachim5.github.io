@@ -5,12 +5,10 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #d8b99b, #a67c52);
-    font-family: 'Amiri', serif;
+    font-family: 'Open Sans', sans-serif;
     color: #2f1d12;
-    line-height: 1.8;
+    background: #f4f4f4;
     overflow-x: hidden;
-    position: relative;
 }
 
 .parallax-bg {
@@ -19,301 +17,235 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/parchment.jpg') repeat, radial-gradient(circle, rgba(232, 199, 159, 0.7), rgba(166, 124, 82, 0.4));
-    background-size: 400px 400px, cover;
+    background: url('https://www.transparenttextures.com/patterns/old-paper.png'), linear-gradient(to bottom, #e0c3a7, #8b5e34);
+    background-size: cover;
     z-index: -1;
-    opacity: 0.85;
-}
-
-nav {
-    background: linear-gradient(to bottom, #3c2516, #1f120a);
-    padding: 25px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);
-    border-bottom: 5px solid #8b5e34;
-}
-
-.nav-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 25px;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.nav-menu li {
-    margin: 12px 25px;
-    position: relative;
-}
-
-.nav-menu li a {
-    text-decoration: none;
-    color: #f5e8c7;
-    font-size: 1.3em;
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    transition: all 0.4s ease;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-}
-
-.nav-menu li a:hover {
-    color: #e0c097;
-    transform: translateY(-4px);
-}
-
-.dropdown .dropbtn {
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: #3c2516;
-    min-width: 180px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-    z-index: 1;
-    border-radius: 8px;
-    top: 100%;
-    right: 0;
-}
-
-.dropdown-content a {
-    color: #f5e8c7;
-    padding: 12px 18px;
-    text-decoration: none;
-    display: block;
-    font-size: 1.1em;
-    font-family: 'Amiri', serif;
-}
-
-.dropdown-content a:hover {
-    background: #8b5e34;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+    opacity: 0.9;
 }
 
 header {
-    text-align: center;
-    padding: 150px 25px 70px;
-    background: linear-gradient(to bottom, rgba(245, 232, 199, 0.9), rgba(232, 199, 159, 0.7));
-    border-bottom: 10px double #8b5e34;
-    margin-bottom: 60px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.header-content {
-    position: relative;
-    z-index: 1;
+.menu-toggle {
+    display: none;
+    background: #3c2516;
+    color: #f5e8c7;
+    border: none;
+    padding: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
 }
 
-header h1 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(2.8em, 6vw, 4.5em);
-    font-weight: 700;
-    text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.6);
-    color: #3c2516;
-    letter-spacing: 3px;
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3c2516, #1f120a);
+    transition: right 0.3s ease;
+    z-index: 1000;
 }
 
-.typewriter {
-    font-size: clamp(1.4em, 3.5vw, 2em);
-    color: #8b5e34;
-    margin-top: 25px;
-    font-family: 'IM Fell English', serif;
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #1f120a;
+    color: #f5e8c7;
+}
+
+.sidebar-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    color: #f5e8c7;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #f5e8c7;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Playfair Display', serif;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #e0c3a7;
 }
 
 .content {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 50px 25px;
-    background: linear-gradient(to bottom, rgba(245, 232, 199, 0.95), rgba(232, 199, 159, 0.85));
-    box-shadow: 25px 25px 50px rgba(0, 0, 0, 0.7);
-    border: 5px solid #8b5e34;
-    border-radius: 25px;
-    position: relative;
+    margin-top: 80px;
+    padding: 20px;
 }
 
-.section {
-    margin-bottom: 60px;
-    padding: 30px;
-    background: url('https://www.transparenttextures.com/patterns/parchment.jpg'), linear-gradient(to bottom, #fffdf5, #e8c79f);
-    border: 4px double #8b5e34;
-    border-radius: 20px;
-    transition: all 0.6s ease;
-    position: relative;
+.card {
+    background: rgba(245, 232, 199, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    transition: all 0.5s ease;
 }
 
-.section:hover {
-    transform: translateY(-12px);
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
-}
-
-.section h2 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(2em, 4.5vw, 2.8em);
+.card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
     color: #3c2516;
-    margin-bottom: 25px;
-    text-align: center;
-    letter-spacing: 2px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-.section h2 i {
-    margin-left: 12px;
+.card h2 i {
+    margin-left: 10px;
     color: #8b5e34;
 }
 
-.section p {
-    font-size: clamp(1.1em, 2.8vw, 1.4em);
+.card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
 }
 
-.historical-img {
-    display: block;
-    margin: 25px auto;
-    max-width: 100%;
-    width: clamp(250px, 60%, 400px);
-    border: 6px solid #3c2516;
-    border-radius: 12px;
-    filter: sepia(100%) contrast(1.3);
-    transition: all 0.5s ease;
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4);
+.card-content p, .card-content ul {
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
-.historical-img:hover {
-    transform: scale(1.1);
-    filter: sepia(70%) contrast(1.2);
+.card-content ul {
+    list-style-type: square;
+    margin-right: 20px;
 }
 
-#map {
-    height: clamp(450px, 65vh, 700px);
-    width: 100%;
-    border: 7px solid #3c2516;
-    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.6);
-    margin-top: 35px;
-    border-radius: 20px;
-    transition: border-color 0.4s ease;
+.card.expanded .card-content {
+    max-height: 1000px; /* قيمة كبيرة لضمان التوسع الكامل */
 }
 
 .map-controls {
     text-align: center;
-    margin: 25px 0;
+    margin: 15px 0;
 }
 
 .map-controls button {
-    padding: 15px 30px;
-    background: linear-gradient(to bottom, #3c2516, #1f120a);
+    padding: 10px 20px;
+    background: #3c2516;
     color: #f5e8c7;
-    border: 4px solid #8b5e34;
-    border-radius: 12px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
     cursor: pointer;
-    margin: 8px 15px;
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.1em, 2.5vw, 1.3em);
-    font-weight: 700;
-    transition: all 0.5s ease;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: background 0.3s;
 }
 
 .map-controls button:hover {
-    background: linear-gradient(to bottom, #8b5e34, #3c2516);
-    transform: translateY(-6px);
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+    background: #8b5e34;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 .timeline {
     position: relative;
-    padding: 25px 0;
+    padding: 20px 0;
 }
 
 .timeline-item {
-    margin: 25px 0;
-    padding: 20px;
-    background: rgba(245, 232, 199, 0.9);
-    border-left: 5px solid #8b5e34;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-right: 4px solid #8b5e34;
     position: relative;
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     background: #3c2516;
     border-radius: 50%;
-    left: -10px;
-    top: 25px;
+    right: -8px;
+    top: 20px;
 }
 
 .timeline-date {
     display: block;
-    font-family: 'Cinzel', serif;
-    font-size: 1.3em;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
     color: #3c2516;
-    margin-bottom: 8px;
-}
-
-.scroll-section {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 1.2s ease-in-out;
-}
-
-.scroll-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background: linear-gradient(to top, #3c2516, #1f120a);
-    color: #f5e8c7;
-    margin-top: 70px;
-    border-top: 6px solid #8b5e34;
-    font-size: clamp(1.1em, 2.5vw, 1.3em);
-    font-family: 'IM Fell English', serif;
+    margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
+    .menu-toggle {
+        display: block;
     }
 
-    .nav-menu li {
-        margin: 12px 0;
+    .sidebar {
+        width: 250px;
     }
 
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-        background: #1f120a;
+    .sidebar-header h2 {
+        font-size: 1.2em;
     }
 
-    header {
-        padding: 100px 15px 50px;
+    .sidebar ul li a {
+        font-size: 1.1em;
     }
 
     .content {
-        padding: 25px 15px;
+        margin-top: 60px;
+        padding: 15px;
     }
 
-    .section {
-        padding: 20px;
+    .card {
+        padding: 15px;
     }
 
-    .map-controls button {
-        display: block;
-        margin: 12px auto;
+    .card h2 {
+        font-size: 1.5em;
+    }
+
+    .card-content p, .card-content ul {
+        font-size: 1em;
+    }
+
+    #map {
+        height: 300px;
     }
 }

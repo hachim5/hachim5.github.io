@@ -3,24 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
     const closeSidebar = document.querySelector('.close-sidebar');
 
-    // تهيئة AOS
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
-
-    // تأثير الكتابة الآلية باستخدام Typed.js
-    const typed = new Typed('.typed-text', {
-        strings: [
-            "أوروبا: من الحرب إلى الأزمة",
-            "من 1918 إلى 1929",
-            "رحلة عبر التاريخ"
-        ],
-        typeSpeed: 50,
-        backSpeed: 30,
-        loop: true
-    });
-
     // فتح وإغلاق القائمة الجانبية على الهواتف فقط
     if (window.innerWidth <= 768) {
         menuToggle.addEventListener('click', () => {

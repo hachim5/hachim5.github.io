@@ -30,19 +30,6 @@ header {
     z-index: 1000;
 }
 
-.hero {
-    text-align: center;
-    padding: 20px 0;
-    background: rgba(60, 37, 22, 0.8);
-    color: #f5e8c7;
-}
-
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
 .menu-toggle {
     display: none;
     background: #3c2516;
@@ -112,7 +99,7 @@ header {
 }
 
 .content {
-    margin-top: 120px;
+    margin-top: 80px;
     padding: 20px;
 }
 
@@ -142,9 +129,11 @@ header {
 }
 
 .card-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
+    display: none; /* مخفي افتراضيًا */
+}
+
+.card.expanded .card-content {
+    display: block; /* يظهر عند التوسيع */
 }
 
 .card-content p, .card-content ul {
@@ -155,10 +144,6 @@ header {
 .card-content ul {
     list-style-type: square;
     margin-right: 20px;
-}
-
-.card.expanded .card-content {
-    max-height: 2000px;
 }
 
 .card-image, .timeline-image {
@@ -173,33 +158,6 @@ header {
 
 .card-image:hover, .timeline-image:hover {
     transform: scale(1.05);
-}
-
-.map-controls {
-    text-align: center;
-    margin: 15px 0;
-}
-
-.map-controls button {
-    padding: 10px 20px;
-    background: #3c2516;
-    color: #f5e8c7;
-    border: none;
-    border-radius: 5px;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.map-controls button:hover {
-    background: #8b5e34;
-}
-
-#map {
-    height: 400px;
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
 }
 
 .timeline {
@@ -272,10 +230,6 @@ header {
 
     .card-image, .timeline-image {
         width: 200px;
-    }
-
-    .hero h1 {
-        font-size: 1.8em;
     }
 }
 

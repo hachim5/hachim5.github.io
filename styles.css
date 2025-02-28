@@ -21,7 +21,6 @@ body {
     background-size: cover;
     z-index: -1;
     opacity: 0.9;
-    transition: transform 0.5s ease; /* سلاسة للخلفية */
 }
 
 header {
@@ -43,27 +42,16 @@ header {
     top: 10px;
     right: 10px;
     z-index: 1001;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.menu-toggle:hover {
-    background: #8b5e34;
-    transform: scale(1.1);
 }
 
 .sidebar {
     position: fixed;
     top: 0;
-    right: -300px;
+    right: 0;
     width: 300px;
     height: 100%;
     background: linear-gradient(to bottom, #3c2516, #1f120a);
-    transition: right 0.5s ease; /* سلاسة للقائمة */
     z-index: 1000;
-}
-
-.sidebar.open {
-    right: 0;
 }
 
 .sidebar-header {
@@ -73,7 +61,6 @@ header {
     padding: 20px;
     background: #1f120a;
     color: #f5e8c7;
-    transition: background 0.3s ease;
 }
 
 .sidebar-header h2 {
@@ -88,11 +75,6 @@ header {
     font-size: 1.5em;
     cursor: pointer;
     display: none;
-    transition: transform 0.3s ease;
-}
-
-.close-sidebar:hover {
-    transform: rotate(90deg);
 }
 
 .sidebar ul {
@@ -102,14 +84,6 @@ header {
 
 .sidebar ul li {
     margin: 15px 0;
-    opacity: 0;
-    transform: translateX(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.sidebar.open ul li {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .sidebar ul li a {
@@ -117,15 +91,11 @@ header {
     text-decoration: none;
     font-size: 1.2em;
     font-family: 'Playfair Display', serif;
-    display: block;
-    padding: 10px;
-    transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s;
 }
 
 .sidebar ul li a:hover {
     color: #e0c3a7;
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(-5px);
 }
 
 .content {
@@ -140,12 +110,7 @@ header {
     margin: 20px auto;
     padding: 20px;
     max-width: 900px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s ease;
 }
 
 .card h2 {
@@ -156,44 +121,24 @@ header {
     cursor: pointer;
     display: flex;
     align-items: center;
-    transition: color 0.3s ease;
-}
-
-.card h2:hover {
-    color: #8b5e34;
 }
 
 .card h2 i {
     margin-left: 10px;
     color: #8b5e34;
-    transition: transform 0.3s ease;
-}
-
-.card.expanded h2 i {
-    transform: rotate(90deg);
 }
 
 .card-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+    display: none; /* مخفي افتراضيًا */
 }
 
 .card.expanded .card-content {
-    max-height: 2000px; /* قيمة كبيرة لضمان التوسع الكامل */
+    display: block; /* يظهر عند التوسيع */
 }
 
 .card-content p, .card-content ul {
     font-size: 1.1em;
     line-height: 1.6;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.card.expanded .card-content p, .card.expanded .card-content ul {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .card-content ul {
@@ -208,14 +153,7 @@ header {
     width: 300px;
     border: 3px solid #8b5e34;
     border-radius: 10px;
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.card.expanded .card-image, .card.expanded .timeline-image {
-    opacity: 1;
-    transform: scale(1);
+    transition: transform 0.3s ease;
 }
 
 .card-image:hover, .timeline-image:hover {
@@ -233,11 +171,6 @@ header {
     background: rgba(255, 255, 255, 0.9);
     border-right: 4px solid #8b5e34;
     position: relative;
-    transition: background 0.3s ease;
-}
-
-.timeline-item:hover {
-    background: rgba(255, 255, 255, 1);
 }
 
 .timeline-item::before {
@@ -249,11 +182,6 @@ header {
     border-radius: 50%;
     right: -8px;
     top: 20px;
-    transition: transform 0.3s ease;
-}
-
-.timeline-item:hover::before {
-    transform: scale(1.2);
 }
 
 .timeline-date {
@@ -262,11 +190,6 @@ header {
     font-size: 1.2em;
     color: #3c2516;
     margin-bottom: 5px;
-    transition: color 0.3s ease;
-}
-
-.timeline-item:hover .timeline-date {
-    color: #8b5e34;
 }
 
 @media (max-width: 768px) {

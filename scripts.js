@@ -3,14 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
     const closeSidebar = document.querySelector('.close-sidebar');
 
-    // فتح وإغلاق القائمة الجانبية
-    menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('open');
-    });
+    // فتح وإغلاق القائمة الجانبية على الهواتف فقط
+    if (window.innerWidth <= 768) {
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
 
-    closeSidebar.addEventListener('click', () => {
-        sidebar.classList.remove('open');
-    });
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+        });
+    }
 
     // التنقل السلس وتوسيع الأقسام
     document.querySelectorAll('.nav-link').forEach(anchor => {
@@ -19,8 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
 
-            // إغلاق القائمة الجانبية
-            sidebar.classList.remove('open');
+            // إغلاق القائمة الجانبية على الهواتف
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('open');
+            }
 
             // إزالة حالة التوسع من جميع الأقسام
             document.querySelectorAll('.card').forEach(card => {

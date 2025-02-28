@@ -31,7 +31,7 @@ header {
 }
 
 .menu-toggle {
-    display: none;
+    display: none; /* مخفي افتراضيًا على جميع الأجهزة */
     background: #3c2516;
     color: #f5e8c7;
     border: none;
@@ -47,16 +47,11 @@ header {
 .sidebar {
     position: fixed;
     top: 0;
-    right: -300px;
+    right: 0;
     width: 300px;
     height: 100%;
     background: linear-gradient(to bottom, #3c2516, #1f120a);
-    transition: right 0.3s ease;
     z-index: 1000;
-}
-
-.sidebar.open {
-    right: 0;
 }
 
 .sidebar-header {
@@ -79,6 +74,7 @@ header {
     color: #f5e8c7;
     font-size: 1.5em;
     cursor: pointer;
+    display: none; /* مخفي افتراضيًا */
 }
 
 .sidebar ul {
@@ -225,31 +221,29 @@ header {
     margin-bottom: 5px;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+        display: block; /* يظهر فقط على الهواتف */
     }
 
     .sidebar {
         width: 250px;
-        right: -250px;
+        right: -250px; /* مخفي افتراضيًا على الهواتف */
     }
 
     .sidebar.open {
         right: 0;
     }
 
-    .sidebar-header h2 {
-        font-size: 1.2em;
-    }
-
-    .sidebar ul li a {
-        font-size: 1.1em;
+    .close-sidebar {
+        display: block; /* يظهر فقط على الهواتف */
     }
 
     .content {
         margin-top: 60px;
         padding: 15px;
+        margin-right: 0; /* لا حاجة لهامش يمين على الهواتف */
     }
 
     .card {
@@ -275,22 +269,21 @@ header {
 
 @media (min-width: 769px) {
     .menu-toggle {
-        display: none;
+        display: none; /* مخفي على الحاسوب */
     }
 
     .sidebar {
-        right: 0;
+        right: 0; /* مرئي دائمًا على الحاسوب */
         width: 250px;
         height: 100%;
         position: fixed;
-        transform: translateX(0);
     }
 
     .close-sidebar {
-        display: none;
+        display: none; /* مخفي على الحاسوب */
     }
 
     .content {
-        margin-right: 270px;
+        margin-right: 270px; /* هامش لتجنب التداخل مع الشريط الجانبي */
     }
 }

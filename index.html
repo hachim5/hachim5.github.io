@@ -6,7 +6,6 @@
     <title>أوروبا: من نهاية الحرب العالمية الأولى إلى أزمة 1929</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,7 +23,8 @@
                 <li><a href="#germany" class="nav-link">ألمانيا</a></li>
                 <li><a href="#france" class="nav-link">فرنسا</a></li>
                 <li><a href="#england" class="nav-link">إنجلترا</a></li>
-                <li><a href="#map-section" class="nav-link">الخريطة</a></li>
+                <li><a href="#map-section" class="nav-link">خريطة أوروبا في تلك الفترة</a></li>
+                <li><a href="#crisis-1929" class="nav-link">أزمة 1929</a></li>
                 <li><a href="#timeline" class="nav-link">الخط الزمني</a></li>
             </ul>
         </nav>
@@ -34,47 +34,47 @@
             <h2><i class="fas fa-book"></i> المقدمة</h2>
             <div class="card-content">
                 <p>انتهت الحرب العالمية الأولى في 11 نوفمبر 1918 بهدنة كومبيين، موقعة في عربة قطار بغابة كومبيين الفرنسية، بعد صراع استمر 4 سنوات وخلّف 16 مليون قتيل وجريح. تفككت إمبراطوريات عظمى مثل النمساوية-المجرية، التي انقسمت إلى النمسا، المجر، تشيكوسلوفاكيا، وأجزاء من يوغوسلافيا، والعثمانية، التي تحولت إلى تركيا الحديثة بموجب معاهدة لوزان 1923. تراكمت ديون الحرب بقيمة 200 مليار دولار، مما أدى إلى أزمات اقتصادية مهدت للكساد الكبير في 29 أكتوبر 1929 بعد انهيار بورصة وول ستريت.</p>
-                <img src="https://images.unsplash.com/photo-1593086505008-8e2b7a4a9703?q=80&w=320" alt="جنود الحرب العالمية الأولى" class="card-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Waffenstillstand_gr.jpg" alt="هدنة كومبيين" class="card-image">
             </div>
         </section>
         <section id="russia" class="card">
             <h2><i class="fas fa-star-and-crescent"></i> روسيا</h2>
             <div class="card-content">
                 <p>في 3 مارس 1918، وقّعت روسيا معاهدة بريست-ليتوفسك، منسحبةً من الحرب وخاسرةً 32% من أراضيها (أكثر من 300 ألف كم²) لصالح بولندا، فنلندا، ودول البلطيق. اندلعت الحرب الأهلية (1918-1921) بين البلاشفة بقيادة لينين والجيوش البيضاء، بدعم 14 دولة غربية، أودت بحياة 9 ملايين، بينهم 2 مليون من الجوع والأمراض. عام 1921، اجتاحت المجاعة الكبرى حوض الفولغا، فقتلت 5 ملايين بسبب الجفاف وسوء التخطيط. في 30 ديسمبر 1922، أُسس الاتحاد السوفيتي، وبدأ لينين سياسة الاقتصاد الجديد (NEP) لإنعاش الاقتصاد، محققًا نموًا بنسبة 10% بحلول 1929.</p>
-                <img src="https://images.pexels.com/photos/14469182/pexels-photo-14469182.jpeg?auto=compress&cs=tinysrgb&w=320" alt="ثورة روسية" class="card-image">
             </div>
         </section>
         <section id="germany" class="card">
             <h2><i class="fas fa-euro-sign"></i> ألمانيا</h2>
             <div class="card-content">
                 <p>في 28 يونيو 1919، وقّعت ألمانيا معاهدة فرساي في قصر فرساي، ملزمةً بدفع 132 مليار مارك ذهبي (33 مليار دولار آنذاك)، وفقدت 70 ألف كم² من أراضيها (الألزاس-لورين، ممر بولندا) وكل مستعمراتها في أفريقيا وآسيا. بحلول 1923، وصل التضخم الفائق إلى 4.2 تريليون مارك للدولار، فتحولت النقود إلى حطب للتدفئة. خطة داوس (1924) قدمت 200 مليون دولار كقروض أمريكية، وخطة يونغ (1929) خففت الديون، لكن الكساد الكبير رفع البطالة إلى 1.9 مليون، ممهدًا لصعود النازية لاحقًا.</p>
-                <img src="https://images.unsplash.com/photo-1593086505008-8e2b7a4a9703?q=80&w=320" alt="خسائر ألمانيا" class="card-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Bundesarchiv_Bild_183-H1216-0500-010%2C_Adolf_Hitler.jpg/320px-Bundesarchiv_Bild_183-H1216-0500-010%2C_Adolf_Hitler.jpg" alt="أدولف هتلر" class="card-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Bundesarchiv_Bild_102-00344A%2C_M%C3%BCnchen%2C_nach_Hitler-Ludendorff_Prozess.jpg" alt="أدولف هتلر" class="card-image">
             </div>
         </section>
         <section id="france" class="card">
             <h2><i class="fas fa-fleur-de-lis"></i> فرنسا</h2>
             <div class="card-content">
                 <p>خسرت فرنسا 1.4 مليون جندي (27% من الشباب بين 18-27)، ودُمرت 34 ألف كم² من أراضيها الشمالية بالخنادق والقصف، بكلفة إعادة بناء 20 مليار فرنك. في 11 يناير 1923، احتلت مع بلجيكا منطقة الرور الصناعية لتأمين 33 مليار دولار تعويضات من ألمانيا، مما أثار توترات دولية. شهدت "السنوات المجنونة" في العشرينيات ازدهارًا ثقافيًا، حيث أصبحت باريس مركزًا للآرت ديكو والجاز، لكن الكساد الكبير عام 1929 خفض صادراتها (النبيذ، المنسوجات) بنسبة 60% وزاد البطالة إلى 15% بحلول 1932.</p>
-                <img src="https://images.pexels.com/photos/236294/pexels-photo-236294.jpeg?auto=compress&cs=tinysrgb&w=320" alt="أنقاض الحرب في فرنسا" class="card-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Bundesarchiv_Bild_183-R09876%2C_Ruhrbesetzung.jpg" alt="احتلال الرور" class="card-image">
             </div>
         </section>
         <section id="england" class="card">
             <h2><i class="fas fa-crown"></i> إنجلترا</h2>
             <div class="card-content">
                 <p>خسرت بريطانيا مليون جندي، وتراجعت صناعتها بعد الحرب مع منافسة أمريكا واليابان، فارتفعت البطالة إلى 11% بحلول 1921. في 3 مايو 1926، نظم 1.7 مليون عامل إضرابًا عامًا لمدة 9 أيام بعد خفض أجور عمال الفحم بنسبة 13%، مما كلف الاقتصاد 50 مليون جنيه. حافظت على الإمبراطورية البريطانية التي شملت 25% من العالم، لكن الكساد الكبير خفض صادراتها (الفحم، الصلب) بنسبة 50%、 وأجبرها على التخلي عن معيار الذهب في 21 سبتمبر 1931، مما أضعف الجنيه بنسبة 25%.</p>
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=320" alt="إضراب عمال بريطانيا" class="card-image">
             </div>
         </section>
         <section id="map-section" class="card">
-            <h2><i class="fas fa-map-marked-alt"></i> الخريطة التفاعلية</h2>
+            <h2><i class="fas fa-map-marked-alt"></i> خريطة أوروبا في تلك الفترة</h2>
             <div class="card-content">
                 <p>استكشف التغيرات الحدودية في أوروبا بين 1918 و1929: تفكك الإمبراطورية النمساوية-المجرية، ظهور بولندا وتشيكوسلوفاكيا، وتقلص ألمانيا والإمبراطورية الروسية.</p>
-                <div class="map-controls">
-                    <button onclick="show1918()">خريطة 1918</button>
-                    <button onclick="show1929()">خريطة 1929</button>
-                </div>
-                <div id="map"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Europe_in_1923.jpg" alt="خريطة أوروبا 1923" class="card-image">
+            </div>
+        </section>
+        <section id="crisis-1929" class="card">
+            <h2><i class="fas fa-chart-line"></i> أزمة 1929</h2>
+            <div class="card-content">
+                <p>في 29 أكتوبر 1929، انهار سوق الأسهم في بورصة وول ستريت بنيويورك، معلنًا بداية الكساد الكبير، أكبر أزمة اقتصادية في القرن العشرين. بدأت الأزمة بانخفاض قيمة الأسهم بنسبة 23% في يوم واحد، مما أدى إلى خسارة 14 مليار دولار في يوم واحد فقط. في غضون أسابيع، انهارت البنوك الأمريكية، وتوقفت القروض لأوروبا، مما أثر على الاقتصادات الأوروبية المتعافية من الحرب. في ألمانيا، وصلت البطالة إلى 6 ملايين بحلول 1932، بينما انخفضت الصادرات البريطانية بنسبة 50%. في فرنسا، تراجع الإنتاج الصناعي بنسبة 40%، وفي الاتحاد السوفيتي، استمر التأثير محدودًا بفضل الاقتصاد المغلق، لكن الضغوط الدولية زادت. استمر الكساد حتى منتصف الثلاثينيات، مما غيّر المشهد السياسي العالمي.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/1929_wall_street_crash_graph.svg" alt="انهيار بورصة وول ستريت" class="card-image">
             </div>
         </section>
         <section id="timeline" class="card">
@@ -84,38 +84,35 @@
                     <div class="timeline-item">
                         <span class="timeline-date">11 نوفمبر 1918</span>
                         <p>نهاية الحرب العالمية الأولى بهدنة كومبيين.</p>
-                        <img src="https://images.unsplash.com/photo-1593086505008-8e2b7a4a9703?q=80&w=320" alt="هدنة كومبيين" class="timeline-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Waffenstillstand_gr.jpg" alt="هدنة كومبيين" class="timeline-image">
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-date">28 يونيو 1919</span>
                         <p>توقيع معاهدة فرساي في قصر فرساي.</p>
-                        <img src="https://images.pexels.com/photos/159315/paris-france-versailles-castle-159315.jpeg?auto=compress&cs=tinysrgb&w=320" alt="قصر فرساي" class="timeline-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Council_of_Four_of_the_Peace_Conference._Mr._Lloyd_George%2C_Signor_Orlando%2C_M._Clemenceau%2C_President_Woodrow_Wilson...._-_NARA_-_530791.tif" alt="توقيع معاهدة فرساي" class="timeline-image">
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-date">1921</span>
                         <p>مجاعة روسيا الكبرى تقتل 5 ملايين بسبب الجفاف.</p>
-                        <img src="https://images.pexels.com/photos/14469182/pexels-photo-14469182.jpeg?auto=compress&cs=tinysrgb&w=320" alt="مجاعة روسيا" class="timeline-image">
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-date">11 يناير 1923</span>
                         <p>احتلال فرنسا وبلجيكا للرور لتأمين التعويضات.</p>
-                        <img src="https://images.pexels.com/photos/236294/pexels-photo-236294.jpeg?auto=compress&cs=tinysrgb&w=320" alt="احتلال الرور" class="timeline-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Bundesarchiv_Bild_183-R09876%2C_Ruhrbesetzung.jpg" alt="احتلال الرور" class="timeline-image">
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-date">3 مايو 1926</span>
                         <p>بدء الإضراب العام في بريطانيا بمشاركة 1.7 مليون عامل.</p>
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=320" alt="الإضراب العام" class="timeline-image">
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-date">29 أكتوبر 1929</span>
                         <p>انهيار بورصة وول ستريت وبداية الكساد الكبير.</p>
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=320" alt="وول ستريت" class="timeline-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/1929_wall_street_crash_graph.svg" alt="انهيار بورصة وول ستريت" class="timeline-image">
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
